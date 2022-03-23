@@ -5,6 +5,7 @@ const cors = require("cors");
 const { createServer } = require("http");
 const connectMongo = require("./utils/connectMongo");
 const socketInit = require("./utils/socket");
+const errorHandler = require("./middlewares/errorHandler");
 
 const PORT = process.env.PORT;
 
@@ -27,6 +28,8 @@ const server = createServer(app);
 
 socketInit(server);
 connectMongo();
+
+app.use(errorHandler);
 server.listen(PORT, () => {
   console.log(`server is running on port - ${PORT}`);
 });
