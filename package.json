@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Rahul Mondal",
+  "license": "MIT",
+  "scripts": {
+    "start":"node server.js",
+    "dev":"nodemon server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "socket.io": "^4.4.1"
+  }
+}
