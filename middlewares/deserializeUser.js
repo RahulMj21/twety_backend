@@ -18,7 +18,7 @@ const deserializeUser = async (req, res, next) => {
   } else {
     const newAccessToken = JWT.getNewAccessToken(
       refreshToken,
-      process.env.ACCESS_TOKEN_SECRET
+      process.env.REFRESH_TOKEN_SECRET
     );
     if (!newAccessToken) return next(CustomErrorHandler.unauthorized());
 
